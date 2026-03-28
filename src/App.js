@@ -9,7 +9,7 @@ function App() {
     if (!prompt) return;
 
     try {
-      const res = await axios.post("http://localhost:5000/generate", { prompt });
+      const res = await axios.post("https://autosite-backend.onrender.com/generate", { prompt });
       setHtml(res.data.html);
     } catch (err) {
       console.error(err);
